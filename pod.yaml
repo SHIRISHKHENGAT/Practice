@@ -7,13 +7,13 @@ metadata:
 spec:
   volumes:
   - name: pv-storage
-    persistentvolumeClaim:
+    persistentVolumeClaim:
       claimName: pv-claim  
   containers:
     - name: my-container
       image: httpd
       ports:
         - containerPort: 80 
-      volumeMount:
+      volumeMounts:
       - name: pv-storage
         mountPath: /var/www/html
